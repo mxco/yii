@@ -1,0 +1,13 @@
+<?php
+
+$config['components']['db'] = [
+    'class' => \yii\db\Connection::class,
+    'dsn' => 'mysql:host=localhost;dbname=database',
+    'username' => 'root',
+    'password' => '',
+];
+if (defined('YII_WEB') && YII_WEB) {
+    $config['components']['request'] = ['cookieValidationKey' => ''];
+}
+
+return $config;
