@@ -9,5 +9,9 @@ $config['components']['db'] = [
 if (defined('YII_WEB') && YII_WEB) {
     $config['components']['request'] = ['cookieValidationKey' => ''];
 }
+$config['bootstrap'][] = 'debug';
+$config['modules']['debug'] = [
+    'class' => 'yii\debug\Module',
+];
 
 return $config;
